@@ -1,0 +1,137 @@
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .containerGame {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      border-radius: 20px;
+      padding: 30px 40px;
+      margin-top: -400px;
+      max-width: 600px;
+      width: 90%;
+      margin-top: 50px;
+      transition: all 0.5s ease;
+    }
+
+    .cardsContainer {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: center;
+      gap: 5px;
+      padding: 10px;
+    }
+
+    .card {
+      height: 150px;
+      /* Daha iyi görünürlük için yükseklik */
+      width: 150px;
+      /* Kare olması için genişlik */
+      background-color: #007aff;
+      /* Kartın kapalıyken arka yüz rengi */
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      /* Emojilerin boyutu */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      position: relative;
+      /* Gerekli olabilir */
+      overflow: hidden;
+      /* Gerekli olabilir */
+      color: transparent;
+      /* Emoji başlangıçta görünmez (kart kapalıyken) */
+      transition: background-color 0.3s, color 0.3s;
+      /* Açılış/kapanış için geçiş efekti */
+    }
+
+    .card.is-flipped {
+      background-color: #fff;
+      color: #1c1c1e;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .card.matched {
+      background-color: green;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    #register,
+    #result {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+      padding: 30px;
+      gap: 15px;
+      transition: all 0.5s ease;
+    }
+
+    h1 {
+      font-weight: 600;
+      color: #1c1c1e;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-weight: 600;
+      color: #1c1c1e;
+      margin-bottom: 20px;
+    }
+
+
+    input {
+      padding: 12px 16px;
+      font-size: 18px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      outline: none;
+      width: 250px;
+      transition: border-color 0.3s;
+      color: black;
+      box-sizing: border-box;
+
+    }
+
+    input:focus {
+      border-color: #007aff;
+      box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.2);
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #007aff;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #005bb5;
+    }
+
+    #greetingMessage {
+      font-size: 24px;
+      color: green;
+      font-weight: 500;
+      margin-bottom: 10px;
+      text-align: center;
+    }
