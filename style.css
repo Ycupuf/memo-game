@@ -1,9 +1,6 @@
     body {
       height: 100vh;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      width: 100vh;
     }
 
     .containerGame {
@@ -30,19 +27,19 @@
     }
 
     .card {
-      height: 150px;
+      height: 50px;
       /* Daha iyi görünürlük için yükseklik */
-      width: 150px;
+      width: 50px;
       /* Kare olması için genişlik */
-      background-color: #007aff;
+      background-color:transparent;
       /* Kartın kapalıyken arka yüz rengi */
-      border-radius: 10px;
+      border-radius: 15px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 48px;
+      font-size: 24px;
       /* Emojilerin boyutu */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       cursor: pointer;
       position: relative;
       /* Gerekli olabilir */
@@ -53,7 +50,14 @@
       transition: background-color 0.3s, color 0.3s;
       /* Açılış/kapanış için geçiş efekti */
     }
-
+.card:hover {
+  color: #005bb5 ;
+  scale: 1.10;
+}
+.cardImages.hidden{
+  background-color: gray;
+  pointer-events: auto;
+}
     .card.is-flipped {
       background-color: #fff;
       color: #1c1c1e;
