@@ -49,10 +49,15 @@
         alert("Please type your name!");
         return;
       }
+  
       greetingMessage.textContent = "Hello " + name + ". Let's play!";
       register.classList.add("hidden");
       game.classList.remove("hidden");
       document.getElementById("matchMessage").classList.add("hidden");
+    setTimeout(() => {
+      greetingMessage.classList.add("hidden")
+    }, 3000);
+
       showCards();
     });
 
